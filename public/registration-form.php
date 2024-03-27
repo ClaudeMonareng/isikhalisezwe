@@ -117,7 +117,7 @@
         //                 '$parentContactNumber', '$parentRace', '$parentGender', '$parentHomeLanguage', '$parentRelationship', '$parentResidentialAddress',
         //                 '$parentResidentialCode', '$secondParentTitle', '$secondParentInitials', '$secondParentFirstNames', '$secondParentSurname',
         //                 '$secondParentIdNumber', '$secondParentRelationship', '$secondParentGender', '$secondParentHomeLanguage', '$secondParentRace',
-        //                 '$secondParentResidentialAddress', '$secondParentResidentialCode', '$secondParentContactNumber',)") or die("error Occurred");
+        //                 '$secondParentResidentialAddress', '$secondParentResidentialCode', '$secondParentContactNumber')") or die("error Occurred");
 
         //                 echo "<div class='message'>
         //                         <p>Registration Successful</p>
