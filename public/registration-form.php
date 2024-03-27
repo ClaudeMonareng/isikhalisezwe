@@ -27,9 +27,112 @@
     </header>
 
     <div class="container">
+
+    <?php
+
+    include("C:/xampp/htdocs/isikhalisezwe/public/connect.php");
+    if(isset($_POST['submit'])){
+
+        $gradeAppliedFor = $_POST['gradeAppliedFor'];
+        $highestGradePassed = $_POST['highestGradePassed'];
+        $yearWhenGradeWasPassed = $_POST['yearWhenGradeWasPassed'];
+
+        $firstName = $_POST['firstName'];
+        $lastName = $_POST['lastName'];
+        $initials = $_POST['initials'];
+
+        $dateOfBirth = $_POST['dateOfBirth'];
+        $idNumber = $_POST['idNumber'];
+        $contactNumber = $_POST['contactNumber'];
+
+        $race = $_POST['race'];
+        $province = $_POST['province'];
+        $gender = $_POST['gender'];
+
+        $homeLanguage = $_POST['homeLanguage'];
+        $residentialAddress = $_POST['residentialAddress'];
+        $residentialCode = $_POST['residentialCode'];
+
+        $learnerEmailAddress = $_POST['learnerEmailAddress'];
+        $preferredLanguageOfInstruction = $_POST['preferredLanguageOfInstruction'];
+        $deceasedParent = $_POST['deceasedParent'];
+
+        $dexterityOfLearner = $_POST['dexterityOfLearner'];
+        $hearingProblem = $_POST['hearingProblem'];
+
+        $parentFirstNames = $_POST['parentFirstNames'];
+        $parentSurname = $_POST['parentSurname'];
+        $parentTitle = $_POST['parentTitle'];
+
+        $parentInitials = $_POST['parentInitials'];
+        $parentIdNumber = $_POST['parentIdNumber'];
+        $parentContactNumber = $_POST['parentContactNumber'];
+
+        $parentRace = $_POST['parentRace'];
+        $parentGender = $_POST['parentGender'];
+        $parentHomeLanguage = $_POST['parentHomeLanguage'];
+
+        $parentRelationship = $_POST['parentRelationship'];
+        $parentResidentialAddress = $_POST['parentResidentialAddress'];
+        $parentResidentialCode = $_POST['parentResidentialCode'];
+
+        $secondParentTitle = $_POST['secondParentTitle'];
+        $secondParentInitials = $_POST['secontParentInitials'];
+        $secondParentFirstNames = $_POST['secondParentFirstNames'];
+
+        $secondParentSurname = $_POST['secondParentSurname'];
+        $secondParentIdNumber = $_POST['secondParentIdNumber'];
+        $secondParentRelationship = $_POST['secondParentRelationship'];
+
+        $secondParentGender = $_POST['secondParentGender'];
+        $secondParentHomeLanguage = $_POST['secondParentHomeLanguage'];
+        $secondParentRace = $_POST['secondParentRace'];
+
+        $secondParentResidentialAddress = $_POST['secondParentResidentialAddress'];
+        $secondParentResidentialCode = $_POST['secondParentResidentialCode'];
+        $secondParentContactNumber = $_POST['secondParentContactNumber'];
+        
+        // verifying the unique email
+
+        // $verify_query = mysqli_query($con, "SELECT Email FROM users WHERE Email='$email'");
+        // if(mysqli_num_rows($verify_query) !=0){
+        //     echo "<div class='message'>
+        //             <p>This email is used, Try another One Please!</p>
+        //           </div> <br>"
+        //     echo "<a href='Javascript:self.history.back()'><button class='btn'>Go Back </button>";
+        // }else{
+        //     mysqli_query($con, "INSERT INTO registration( 
+        //                  gradeAppliedFor, highestGradePassed, yearWhenGradeWasPassed, firstName, lastName, initials,
+        //                  dateOfBirth, idNumber, contactNumber, race, province, gender, homeLanguage, residentialAddress,
+        //                  residentialCode, learnerEmailAddress, preferredLanguageOfInstruction, deceasedParent, dexterityOfLearner,
+        //                  hearingProblem, parentFirstNames, parentSurname, parentTitle, parentInitials, parentIdNumber, parentContactNumber,
+        //                  parentRace, parentGender, parentHomeLanguage, parentRelationship,parentResidentialAddress, parentResidentialCode,
+        //                  secondParentTitle, secontParentInitials, secondParentFirstNames, secondParentSurname, secondParentIdNumber,
+        //                  secondParentRelationship, secondParentGender, secondParentHomeLanguage, secondParentRace,
+        //                  secondParentResidentialAddress, secondParentResidentialCode, secondParentContactNumber) VALUES (
+        //                 '$gradeAppliedFor', '$highestGradePassed', '$yearWhenGradeWasPassed',
+        //                 '$firstName', '$lastName', '$initials', '$dateOfBirth', '$idNumber', '$contactNumber', '$race', '$province', '$gender', '$homeLanguage',
+        //                 '$residentialAddress', '$residentialCode', '$learnerEmailAddress', '$preferredLanguageOfInstruction', '$deceasedParent',
+        //                 '$dexterityOfLearner', '$hearingProblem', '$parentFirstNames', '$parentSurname', '$parentTitle', '$parentInitials', '$parentIdNumber',
+        //                 '$parentContactNumber', '$parentRace', '$parentGender', '$parentHomeLanguage', '$parentRelationship', '$parentResidentialAddress',
+        //                 '$parentResidentialCode', '$secondParentTitle', '$secondParentInitials', '$secondParentFirstNames', '$secondParentSurname',
+        //                 '$secondParentIdNumber', '$secondParentRelationship', '$secondParentGender', '$secondParentHomeLanguage', '$secondParentRace',
+        //                 '$secondParentResidentialAddress', '$secondParentResidentialCode', '$secondParentContactNumber',)") or die("error Occurred");
+
+        //                 echo "<div class='message'>
+        //                         <p>Registration Successful</p>
+        //                     </div> <br>"
+        //                 echo "<a href='index.php'><button class='btn'>Registration</button>";
+
+        // }
+        
+    }else{
+
+    ?>
+
         <header>Online Registration</header>
 
-        <form action="form-handler.php" method="post">
+        <form action="connect.php" method="post">
             <div class="form first">
                 <div class="details personal">
                     <span class="title">Learner Personal Details</span>
@@ -142,51 +245,51 @@
                     <div class="fields">
                         <div class="input-field">
                             <label>First Names</label>
-                            <input type="text" name="firstNames" placeholder="Enter your firstnames" required >
+                            <input type="text" name="parentFirstNames" placeholder="Enter your firstnames" required >
                         </div>
                         <div class="input-field">
                             <label>Surname</label>
-                            <input type="text`" name="surname" placeholder="Enter your surname" required >
+                            <input type="text`" name="parentSurname" placeholder="Enter your surname" required >
                         </div>
                         <div class="input-field">
                             <label>Title</label>
-                            <input type="text" name="title" placeholder="Enter your title" required >
+                            <input type="text" name="parentTitle" placeholder="Enter your title" required >
                         </div>
                         <div class="input-field">
                             <label>Initials</label>
-                            <input type="text" name="initials" placeholder="Enter your initials" required >
+                            <input type="text" name="parentInitials" placeholder="Enter your initials" required >
                         </div>
                         <div class="input-field">
                             <label>ID Number</label>
-                            <input type="text" name="idNumber" placeholder="Enter your ID Number" required >
+                            <input type="text" name="parentIdNumber" placeholder="Enter your ID Number" required >
                         </div>
                         <div class="input-field">
                             <label>Contact Number</label>
-                            <input type="text" name="contactNumber" placeholder="Enter your contact number" required >
+                            <input type="text" name="parentContactNumber" placeholder="Enter your contact number" required >
                         </div>
                         <div class="input-field">
                             <label>Race</label>
-                            <input type="text" name="race" placeholder="Race" required >
+                            <input type="text" name="parentRace" placeholder="Race" required >
                         </div>
                         <div class="input-field">
                             <label>Gender</label>
-                            <input type="text" name="gender" placeholder="Enter your gender" required >
+                            <input type="text" name="parentGender" placeholder="Enter your gender" required >
                         </div>
                         <div class="input-field">
                             <label>Home Language</label>
-                            <input type="text" name="homeLanguage" placeholder="Home Language" required >
+                            <input type="text" name="parentHomeLanguage" placeholder="Home Language" required >
                         </div>
                         <div class="input-field">
                             <label>Relationship</label>
-                            <input type="text" name="relationship" placeholder="Relationship" required >
+                            <input type="text" name="parentRelationship" placeholder="Relationship" required >
                         </div>
                         <div class="input-field">
                             <label>Residential Address</label>
-                            <input type="text" name="residentialAddress" placeholder="Residence Address" required >
+                            <input type="text" name="parentResidentialAddress" placeholder="Residence Address" required >
                         </div>
                         <div class="input-field">
                             <label>Residential Code</label>
-                            <input type="text" name="residentialCode" placeholder="Residence Code" required >
+                            <input type="text" name="parentResidentialCode" placeholder="Residence Code" required >
                         </div>
                     </div>
                 </div>
@@ -196,51 +299,51 @@
                     <div class="fields">
                         <div class="input-field">
                             <label>Title</label>
-                            <input type="text" name="title" placeholder="Enter your title" required >
+                            <input type="text" name="secondParentTitle" placeholder="Enter your title" required >
                         </div>
                         <div class="input-field">
                             <label>Initials</label>
-                            <input type="text" name="initials" placeholder="Enter your initials" required >
+                            <input type="text" name="secondParentInitials" placeholder="Enter your initials" required >
                         </div>
                         <div class="input-field">
                             <label>First Names</label>
-                            <input type="text" name="firstNames" placeholder="Enter your first name(s)" required >
+                            <input type="text" name="secondParentFirstNames" placeholder="Enter your first name(s)" required >
                         </div>
                         <div class="input-field">
                             <label>Surname</label>
-                            <input type="text" name="surname" placeholder="Enter your surname" required >
+                            <input type="text" name="secondParentSurname" placeholder="Enter your surname" required >
                         </div>
                         <div class="input-field">
                             <label>ID Number</label>
-                            <input type="text" name="idNumber" placeholder="Enter your ID Number" required >
+                            <input type="text" name="secondParentIdNumber" placeholder="Enter your ID Number" required >
                         </div>
                         <div class="input-field">
                             <label>Relationship</label>
-                            <input type="text" name="relationship" placeholder="Enter your relationship" required >
+                            <input type="text" name="secondParentRelationship" placeholder="Enter your relationship" required >
                         </div>
                         <div class="input-field">
                             <label>Gender</label>
-                            <input type="text" name="gender" placeholder="gender" required >
+                            <input type="text" name="secondParentGender" placeholder="gender" required >
                         </div>
                         <div class="input-field">
                             <label>Home Language</label>
-                            <input type="text" name="homeLanguage" placeholder="Enter your home language" required >
+                            <input type="text" name="secondParentHomeLanguage" placeholder="Enter your home language" required >
                         </div>
                         <div class="input-field">
                             <label>Race</label>
-                            <input type="text" name="race" placeholder="race" required >
+                            <input type="text" name="secondParentRace" placeholder="race" required >
                         </div>
                         <div class="input-field">
                             <label>Residential Address</label>
-                            <input type="text" name="residentialAddress" placeholder="Residence Address" required >
+                            <input type="text" name="secondParentResidentialAddress" placeholder="Residence Address" required >
                         </div>
                         <div class="input-field">
                             <label>Residential Code</label>
-                            <input type="text" name="residentialCode" placeholder="Residence Code" required >
+                            <input type="text" name="secondParentResidentialCode" placeholder="Residence Code" required >
                         </div>
                         <div class="input-field">
                             <label>Contact Number</label>
-                            <input type="text" name="contactNumber" placeholder="contactNumber" required >
+                            <input type="text" name="secondParentContactNumber" placeholder="contactNumber" required >
                         </div>
                     </div>
                 </div>
@@ -250,13 +353,14 @@
                         <i class="uil uil-navigator"></i>
                     </div>
                     <div class="submitBtn">
-                        <input type="submit" value="Send">
+                        <input type="submit" class="btnText" name="submit" value="Send">
                         <i class="uil uil-navigator"></i>
                     </div>
                 </div>
             </div>
         </form>        
     </div>
+    <?php }  ?>
     <script src="index.js"></script>
 </body>
 </html>
