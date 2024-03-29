@@ -21,7 +21,7 @@ window.addEventListener("scroll", function(){
 
 // REGISTRATION FORM
 
-const form = document.querySelector("form"),
+const form = document.querySelector("form");
 
 nextBtn = form.querySelector(".nextBtn"),
 backBtn = form.querySelector(".backBtn"),
