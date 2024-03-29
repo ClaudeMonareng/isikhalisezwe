@@ -182,7 +182,7 @@ form .fields .input-field{
 .input-field input[type= "date"]:valid{
     color: #707070;
 }
-.container form button, .nextBtn, .backBtn, .submitBtn, input[type=submit]{
+.container form button, .nextBtn, .backBtn, .submitBtn{
     display: flex; 
     align-items: center;
     justify-content: center;
@@ -200,24 +200,24 @@ form .fields .input-field{
 }
 .container form button,
 .container form .backBtn,
-.container form .submitBtn,
-.container form input[type=submit]{
+.container form .submitBtn{
     font-size: 14px;
     font-weight: 400;
 }
 form button:hover{
     background-color: #265df2;
 }
-form button i, .form .backBtn  i{
+form button i, .form .backBtn  i, .form .submitBtn i{
     margin: 0 6px;
 }
-form .backBtn i{
+form .backBtn i,
+form .submitBtn i{
     transform: rotate(180deg);
 }
 form .buttons{
     display: flex;
     align-items: center;
 }
-form .buttons button, .btnText, .backBtn, .submitBtn, input[type=submit]{
+form .buttons button, .btnText, .backBtn, .submitBtn{
     margin-right: 14px;
 }

@@ -1,3 +1,9 @@
+<?php
+
+    session_start();
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -28,10 +34,10 @@
 
     <div class="container">
 
-    <?php
+        <?php
 
-    include("C:/xampp/htdocs/isikhalisezwe/public/connect.php");
-    if(isset($_POST['submit'])){
+        include("C:/xampp/htdocs/isikhalisezwe/public/connect.php");
+        if(isset($_POST['submit'])){
 
         $gradeAppliedFor = $_POST['gradeAppliedFor'];
         $highestGradePassed = $_POST['highestGradePassed'];
@@ -91,7 +97,7 @@
         $secondParentResidentialAddress = $_POST['secondParentResidentialAddress'];
         $secondParentResidentialCode = $_POST['secondParentResidentialCode'];
         $secondParentContactNumber = $_POST['secondParentContactNumber'];
-        
+
         // verifying the unique email
 
         // $verify_query = mysqli_query($con, "SELECT Email FROM users WHERE Email='$email'");
@@ -125,10 +131,10 @@
         //                 echo "<a href='index.php'><button class='btn'>Registration</button>";
 
         // }
-        
-    }else{
 
-    ?>
+        }else{
+
+        ?>
 
         <header>Online Registration</header>
 
@@ -354,7 +360,7 @@
                     </div>
                     <div class="submitBtn">
                         <input type="submit" class="btnText" name="submit" value="Send">
-                        <i class="uil uil-navigator"></i>
+                        <i class="uil uil-envelope-send"></i>
                     </div>
                 </div>
             </div>
