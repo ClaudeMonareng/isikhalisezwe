@@ -254,7 +254,7 @@ h3{
     padding-top: 100px;
 }
 .learners-col{
-    flex-basis: 24%;
+    flex-basis: 48%;
     border-radius: 10px;
     margin-bottom: 30px;
     position: relative;
@@ -295,6 +295,50 @@ h3{
 }
 .learners-col:hover{
     box-shadow: 0 0 20px 0px rgba(0, 0, 0, 0.2);
+    transform: scale(1.03);
+}
+
+/* UPDATES */
+
+.updates{
+    width: 80%;
+    margin: auto;
+    text-align: center;
+    padding-top: 100px;
+}
+p{
+    color: #777;
+    font-size: 14px;
+    font-weight: 300;
+    line-height: 22px;
+    padding: 10px;
+}
+.row{
+    margin-top: 5%;
+    display: flex;
+    justify-content: space-around;
+}
+
+/* STAY UPDATED COLUMN */
+/* THERE ARE TWO OF THEM */
+
+.updates-col{
+    flex-basis: 48%;
+    background: linear-gradient(to right, rgb(83, 83, 245), rgba(94, 255, 125, 0));
+    box-shadow: 0 0 20px 0px rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
+    margin-bottom: 5%;
+    padding: 20px 12px;
+    box-sizing: border-box;
+    transition: 0.2s;
+    cursor: pointer;
+}
+h3{
+    text-align: center;
+    font-weight: 600;
+    margin: 10px 0;
+}
+.updates-col:hover{
     transform: scale(1.03);
 }
 
@@ -344,7 +388,7 @@ h3{
     text-align: center;
 }
 .testimonial-col{
-    flex-basis: 40%;
+    flex-basis: 45%;
     border-radius: 10px;
     margin-bottom: 5%;
     text-align: left;
