@@ -227,6 +227,7 @@ p{
 .grades-col{
     flex-basis: 31%;
     background: linear-gradient(to right, rgb(83, 83, 245), rgba(94, 255, 125, 0));
+    box-shadow: 0 0 20px 0px rgba(0, 0, 0, 0.2);
     border-radius: 10px;
     margin-bottom: 5%;
     padding: 20px 12px;
@@ -240,7 +241,6 @@ h3{
     margin: 10px 0;
 }
 .grades-col:hover{
-    box-shadow: 0 0 20px 0px rgba(0, 0, 0, 0.2);
     transform: scale(1.03);
 }
 
