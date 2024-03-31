@@ -62,8 +62,18 @@
 // DATABASE CONNECTION
 
 // $connection = new mysqli('localhost', 'root', '', 'isikhalisezwe');
+try{
+    $con = mysqli_connect("localhost", 
+                          "root", 
+                          "HSMQTQwpj247!", 
+                          "isikhalisezwe");
+}catch(mysqli_sql_exception){
+    echo"Could not connect!";
+}
 
-$con = mysqli_connect("localhost", "root", "", "isikhalisezwe") or die("Couldn't connect");
+// if($con){
+//     echo"You are connected!";
+// }
 
 // if($connection->connect_error){
 //     die('Connection Failed : '.$connection->connect_error);
@@ -74,7 +84,7 @@ $con = mysqli_connect("localhost", "root", "", "isikhalisezwe") or die("Couldn't
 //             residentialCode, learnerEmailAddress, preferredLanguageOfInstruction, deceasedParent, dexterityOfLearner,
 //             hearingProblem, parentFirstNames, parentSurname, parentTitle, parentInitials, parentIdNumber, parentContactNumber,
 //             parentRace, parentGender, parentHomeLanguage, parentRelationship,parentResidentialAddress, parentResidentialCode,
-//             secondParentTitle, secontParentInitials, secondParentFirstNames, secondParentSurname, secondParentIdNumber,
+//             secondParentTitle, secondParentInitials, secondParentFirstNames, secondParentSurname, secondParentIdNumber,
 //             secondParentRelationship, secondParentGender, secondParentHomeLanguage, secondParentRace,
 //             secondParentResidentialAddress, secondParentResidentialCode, secondParentContactNumber
 //             )values(

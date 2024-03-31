@@ -1,8 +1,3 @@
-<?php
-
-    session_start();
-
-?>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -36,7 +31,27 @@
 
         <?php
 
-        include("C:/xampp/htdocs/isikhalisezwe/public/connect.php");
+        include("connect.php");
+
+        $sql= "INSERT INTO registration (gradeAppliedFor, highestGradePassed, yearWhenGradeWasPassed, firstName, lastName, initials,
+                        dateOfBirth, idNumber, contactNumber, race, province, gender, homeLanguage, residentialAddress,
+                        residentialCode, learnerEmailAddress, preferredLanguageOfInstruction, deceasedParent, dexterityOfLearner,
+                        hearingProblem, parentFirstNames, parentSurname, parentTitle, parentInitials, parentIdNumber, parentContactNumber,
+                        parentRace, parentGender, parentHomeLanguage, parentRelationship,parentResidentialAddress, parentResidentialCode,
+                        secondParentTitle, secondParentInitials, secondParentFirstNames, secondParentSurname, secondParentIdNumber,
+                        secondParentRelationship, secondParentGender, secondParentHomeLanguage, secondParentRace,
+                        secondParentResidentialAddress, secondParentResidentialCode, secondParentContactNumber)
+                        VALUES ('8', '7', 'dfd', 'dvs', 'sdf', 'dsgas', 'dfd', 'dvs', 'sdf', 'dsgas', 
+                            'dfd','dvs', 'sdf', 'dsgas', 'dfd', 'dvs', 'sdf', 'dsgas', 'rgs', 'sdfs',
+                            'dfd','dvs', 'sdf', 'dsgas', 'dfd', 'dvs', 'sdf', 'dsgas', 'rgs', 'sdfs',
+                            'dfd','dvs', 'sdf', 'dsgas', 'dfd', 'dvs', 'sdf', 'dsgas', 'rgs', 'sdfs',
+                            'dfd','dvs', 'sdf', 'dsgas')";
+       try{
+            mysqli_query($con, $sql);
+            // echo"Learner is now registered";
+       } catch(mysqli_sql_exception){
+            echo"Could not register";
+       }
         if(isset($_POST['submit'])){
 
         $gradeAppliedFor = $_POST['gradeAppliedFor'];
@@ -131,6 +146,7 @@
         //                 echo "<a href='index.php'><button class='btn'>Registration</button>";
 
         // }
+        mysqli_close($con);
 
         }else{
 
