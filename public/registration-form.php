@@ -33,128 +33,77 @@
 
         include("connect.php");
 
-        $sql= "INSERT INTO registration (gradeAppliedFor, highestGradePassed, yearWhenGradeWasPassed, firstName, lastName, initials,
-                        dateOfBirth, idNumber, contactNumber, race, province, gender, homeLanguage, residentialAddress,
-                        residentialCode, learnerEmailAddress, preferredLanguageOfInstruction, deceasedParent, dexterityOfLearner,
-                        hearingProblem, parentFirstNames, parentSurname, parentTitle, parentInitials, parentIdNumber, parentContactNumber,
-                        parentRace, parentGender, parentHomeLanguage, parentRelationship,parentResidentialAddress, parentResidentialCode,
-                        secondParentTitle, secondParentInitials, secondParentFirstNames, secondParentSurname, secondParentIdNumber,
-                        secondParentRelationship, secondParentGender, secondParentHomeLanguage, secondParentRace,
-                        secondParentResidentialAddress, secondParentResidentialCode, secondParentContactNumber)
-                        VALUES ('8', '7', 'dfd', 'dvs', 'sdf', 'dsgas', 'dfd', 'dvs', 'sdf', 'dsgas', 
-                            'dfd','dvs', 'sdf', 'dsgas', 'dfd', 'dvs', 'sdf', 'dsgas', 'rgs', 'sdfs',
-                            'dfd','dvs', 'sdf', 'dsgas', 'dfd', 'dvs', 'sdf', 'dsgas', 'rgs', 'sdfs',
-                            'dfd','dvs', 'sdf', 'dsgas', 'dfd', 'dvs', 'sdf', 'dsgas', 'rgs', 'sdfs',
-                            'dfd','dvs', 'sdf', 'dsgas')";
-       try{
-            mysqli_query($con, $sql);
-            // echo"Learner is now registered";
-       } catch(mysqli_sql_exception){
-            echo"Could not register";
-       }
-        if(isset($_POST['submit'])){
+        // if(isset($_POST['submit'])){
 
-        $gradeAppliedFor = $_POST['gradeAppliedFor'];
-        $highestGradePassed = $_POST['highestGradePassed'];
-        $yearWhenGradeWasPassed = $_POST['yearWhenGradeWasPassed'];
+        // $gradeAppliedFor = $_POST['gradeAppliedFor'];
+        // $highestGradePassed = $_POST['highestGradePassed'];
+        // $yearWhenGradeWasPassed = $_POST['yearWhenGradeWasPassed'];
 
-        $firstName = $_POST['firstName'];
-        $lastName = $_POST['lastName'];
-        $initials = $_POST['initials'];
+        // $firstName = $_POST['firstName'];
+        // $lastName = $_POST['lastName'];
+        // $initials = $_POST['initials'];
 
-        $dateOfBirth = $_POST['dateOfBirth'];
-        $idNumber = $_POST['idNumber'];
-        $contactNumber = $_POST['contactNumber'];
+        // $dateOfBirth = $_POST['dateOfBirth'];
+        // $idNumber = $_POST['idNumber'];
+        // $contactNumber = $_POST['contactNumber'];
 
-        $race = $_POST['race'];
-        $province = $_POST['province'];
-        $gender = $_POST['gender'];
+        // $race = $_POST['race'];
+        // $province = $_POST['province'];
+        // $gender = $_POST['gender'];
 
-        $homeLanguage = $_POST['homeLanguage'];
-        $residentialAddress = $_POST['residentialAddress'];
-        $residentialCode = $_POST['residentialCode'];
+        // $homeLanguage = $_POST['homeLanguage'];
+        // $residentialAddress = $_POST['residentialAddress'];
+        // $residentialCode = $_POST['residentialCode'];
 
-        $learnerEmailAddress = $_POST['learnerEmailAddress'];
-        $preferredLanguageOfInstruction = $_POST['preferredLanguageOfInstruction'];
-        $deceasedParent = $_POST['deceasedParent'];
+        // $learnerEmailAddress = $_POST['learnerEmailAddress'];
+        // $preferredLanguageOfInstruction = $_POST['preferredLanguageOfInstruction'];
+        // $deceasedParent = $_POST['deceasedParent'];
 
-        $dexterityOfLearner = $_POST['dexterityOfLearner'];
-        $hearingProblem = $_POST['hearingProblem'];
+        // $dexterityOfLearner = $_POST['dexterityOfLearner'];
+        // $hearingProblem = $_POST['hearingProblem'];
 
-        $parentFirstNames = $_POST['parentFirstNames'];
-        $parentSurname = $_POST['parentSurname'];
-        $parentTitle = $_POST['parentTitle'];
+        // $parentFirstNames = $_POST['parentFirstNames'];
+        // $parentSurname = $_POST['parentSurname'];
+        // $parentTitle = $_POST['parentTitle'];
 
-        $parentInitials = $_POST['parentInitials'];
-        $parentIdNumber = $_POST['parentIdNumber'];
-        $parentContactNumber = $_POST['parentContactNumber'];
+        // $parentInitials = $_POST['parentInitials'];
+        // $parentIdNumber = $_POST['parentIdNumber'];
+        // $parentContactNumber = $_POST['parentContactNumber'];
 
-        $parentRace = $_POST['parentRace'];
-        $parentGender = $_POST['parentGender'];
-        $parentHomeLanguage = $_POST['parentHomeLanguage'];
+        // $parentRace = $_POST['parentRace'];
+        // $parentGender = $_POST['parentGender'];
+        // $parentHomeLanguage = $_POST['parentHomeLanguage'];
 
-        $parentRelationship = $_POST['parentRelationship'];
-        $parentResidentialAddress = $_POST['parentResidentialAddress'];
-        $parentResidentialCode = $_POST['parentResidentialCode'];
+        // $parentRelationship = $_POST['parentRelationship'];
+        // $parentResidentialAddress = $_POST['parentResidentialAddress'];
+        // $parentResidentialCode = $_POST['parentResidentialCode'];
 
-        $secondParentTitle = $_POST['secondParentTitle'];
-        $secondParentInitials = $_POST['secontParentInitials'];
-        $secondParentFirstNames = $_POST['secondParentFirstNames'];
+        // $secondParentTitle = $_POST['secondParentTitle'];
+        // $secondParentInitials = $_POST['secontParentInitials'];
+        // $secondParentFirstNames = $_POST['secondParentFirstNames'];
 
-        $secondParentSurname = $_POST['secondParentSurname'];
-        $secondParentIdNumber = $_POST['secondParentIdNumber'];
-        $secondParentRelationship = $_POST['secondParentRelationship'];
+        // $secondParentSurname = $_POST['secondParentSurname'];
+        // $secondParentIdNumber = $_POST['secondParentIdNumber'];
+        // $secondParentRelationship = $_POST['secondParentRelationship'];
 
-        $secondParentGender = $_POST['secondParentGender'];
-        $secondParentHomeLanguage = $_POST['secondParentHomeLanguage'];
-        $secondParentRace = $_POST['secondParentRace'];
+        // $secondParentGender = $_POST['secondParentGender'];
+        // $secondParentHomeLanguage = $_POST['secondParentHomeLanguage'];
+        // $secondParentRace = $_POST['secondParentRace'];
 
-        $secondParentResidentialAddress = $_POST['secondParentResidentialAddress'];
-        $secondParentResidentialCode = $_POST['secondParentResidentialCode'];
-        $secondParentContactNumber = $_POST['secondParentContactNumber'];
+        // $secondParentResidentialAddress = $_POST['secondParentResidentialAddress'];
+        // $secondParentResidentialCode = $_POST['secondParentResidentialCode'];
+        // $secondParentContactNumber = $_POST['secondParentContactNumber'];
 
-        // verifying the unique email
-
-        // $verify_query = mysqli_query($con, "SELECT Email FROM users WHERE Email='$email'");
-        // if(mysqli_num_rows($verify_query) !=0){
-        //     echo "<div class='message'>
-        //             <p>This email is used, Try another One Please!</p>
-        //           </div> <br>"
-        //     echo "<a href='Javascript:self.history.back()'><button class='btn'>Go Back </button>";
-        // }else{
-        //     mysqli_query($con, "INSERT INTO registration( 
-        //                  gradeAppliedFor, highestGradePassed, yearWhenGradeWasPassed, firstName, lastName, initials,
-        //                  dateOfBirth, idNumber, contactNumber, race, province, gender, homeLanguage, residentialAddress,
-        //                  residentialCode, learnerEmailAddress, preferredLanguageOfInstruction, deceasedParent, dexterityOfLearner,
-        //                  hearingProblem, parentFirstNames, parentSurname, parentTitle, parentInitials, parentIdNumber, parentContactNumber,
-        //                  parentRace, parentGender, parentHomeLanguage, parentRelationship,parentResidentialAddress, parentResidentialCode,
-        //                  secondParentTitle, secontParentInitials, secondParentFirstNames, secondParentSurname, secondParentIdNumber,
-        //                  secondParentRelationship, secondParentGender, secondParentHomeLanguage, secondParentRace,
-        //                  secondParentResidentialAddress, secondParentResidentialCode, secondParentContactNumber) VALUES (
-        //                 '$gradeAppliedFor', '$highestGradePassed', '$yearWhenGradeWasPassed',
-        //                 '$firstName', '$lastName', '$initials', '$dateOfBirth', '$idNumber', '$contactNumber', '$race', '$province', '$gender', '$homeLanguage',
-        //                 '$residentialAddress', '$residentialCode', '$learnerEmailAddress', '$preferredLanguageOfInstruction', '$deceasedParent',
-        //                 '$dexterityOfLearner', '$hearingProblem', '$parentFirstNames', '$parentSurname', '$parentTitle', '$parentInitials', '$parentIdNumber',
-        //                 '$parentContactNumber', '$parentRace', '$parentGender', '$parentHomeLanguage', '$parentRelationship', '$parentResidentialAddress',
-        //                 '$parentResidentialCode', '$secondParentTitle', '$secondParentInitials', '$secondParentFirstNames', '$secondParentSurname',
-        //                 '$secondParentIdNumber', '$secondParentRelationship', '$secondParentGender', '$secondParentHomeLanguage', '$secondParentRace',
-        //                 '$secondParentResidentialAddress', '$secondParentResidentialCode', '$secondParentContactNumber')") or die("error Occurred");
-
-        //                 echo "<div class='message'>
-        //                         <p>Registration Successful</p>
-        //                     </div> <br>"
-        //                 echo "<a href='index.php'><button class='btn'>Registration</button>";
 
         // }
-        mysqli_close($con);
-
-        }else{
+        // else{}
 
         ?>
 
         <header>Online Registration</header>
 
-        <form action="connect.php" method="post">
+        <!-- <form action="connect.php" method="post"> -->
+        <form action="<?php htmlspecialchars($_SERVER["PHP_SELF"]) ?>" method="post">
             <div class="form first">
                 <div class="details personal">
                     <span class="title">Learner Personal Details</span>
@@ -375,14 +324,104 @@
                         <i class="uil uil-navigator"></i>
                     </div>
                     <div class="submitBtn">
-                        <input type="submit" class="btnText" name="submit" value="Send">
+                        <input type="submit" class="btnText" name="submit" value="register">
                         <i class="uil uil-envelope-send"></i>
                     </div>
                 </div>
             </div>
         </form>        
     </div>
-    <?php }  ?>
     <script src="index.js"></script>
 </body>
 </html>
+
+<?php
+
+if($_SERVER["REQUEST_METHOD"] == "POST"){
+    
+    $gradeAppliedFor = filter_input(INPUT_POST, "gradeAppliedFor", FILTER_SANITIZE_SPECIAL_CHARS);
+    $highestGradePassed = filter_input(INPUT_POST, "highestGradePassed", FILTER_SANITIZE_SPECIAL_CHARS);
+    $yearWhenGradeWasPassed = filter_input(INPUT_POST, "yearWhenGradeWasPassed", FILTER_SANITIZE_SPECIAL_CHARS);
+    
+    $firstName = filter_input(INPUT_POST, "firstName", FILTER_SANITIZE_SPECIAL_CHARS);
+    $lastName = filter_input(INPUT_POST, "lastName", FILTER_SANITIZE_SPECIAL_CHARS);
+    $initials = filter_input(INPUT_POST, "initials", FILTER_SANITIZE_SPECIAL_CHARS);
+    
+    $dateOfBirth = filter_input(INPUT_POST, "dateOfBirth", FILTER_SANITIZE_SPECIAL_CHARS);
+    $idNumber = filter_input(INPUT_POST, "idNumber", FILTER_SANITIZE_SPECIAL_CHARS);
+    $contactNumber = filter_input(INPUT_POST, "contactNumber", FILTER_SANITIZE_SPECIAL_CHARS);
+    
+    $race = filter_input(INPUT_POST, "race", FILTER_SANITIZE_SPECIAL_CHARS);
+    $province = filter_input(INPUT_POST, "province", FILTER_SANITIZE_SPECIAL_CHARS);
+    $gender = filter_input(INPUT_POST, "gender", FILTER_SANITIZE_SPECIAL_CHARS);
+    
+    $homeLanguage = filter_input(INPUT_POST, "homeLanguage", FILTER_SANITIZE_SPECIAL_CHARS);
+    $residentialAddress = filter_input(INPUT_POST, "residentialAddress", FILTER_SANITIZE_SPECIAL_CHARS);
+    $residentialCode = filter_input(INPUT_POST, "residentialCode", FILTER_SANITIZE_SPECIAL_CHARS);
+    
+    $learnerEmailAddress = filter_input(INPUT_POST, "learnerEmailAddress", FILTER_SANITIZE_SPECIAL_CHARS);
+    $preferredLanguageOfInstruction = filter_input(INPUT_POST, "preferredLanguageOfInstruction", FILTER_SANITIZE_SPECIAL_CHARS);
+    $deceasedParent = filter_input(INPUT_POST, "deceasedParent", FILTER_SANITIZE_SPECIAL_CHARS);
+    
+    $dexterityOfLearner = filter_input(INPUT_POST, "dexterityOfLearner", FILTER_SANITIZE_SPECIAL_CHARS);
+    $hearingProblem = filter_input(INPUT_POST, "hearingProblem", FILTER_SANITIZE_SPECIAL_CHARS);
+    
+    $parentFirstNames = filter_input(INPUT_POST, "parentFirstNames", FILTER_SANITIZE_SPECIAL_CHARS);
+    $parentSurname = filter_input(INPUT_POST, "parentSurname", FILTER_SANITIZE_SPECIAL_CHARS);
+    $parentTitle = filter_input(INPUT_POST, "parentTitle", FILTER_SANITIZE_SPECIAL_CHARS);
+    
+    $parentInitials = filter_input(INPUT_POST, "parentInitials", FILTER_SANITIZE_SPECIAL_CHARS);
+    $parentIdNumber = filter_input(INPUT_POST, "parentIdNumber", FILTER_SANITIZE_SPECIAL_CHARS);
+    $parentContactNumber = filter_input(INPUT_POST, "parentContactNumber", FILTER_SANITIZE_SPECIAL_CHARS);
+    
+    $parentRace = filter_input(INPUT_POST, "parentRace", FILTER_SANITIZE_SPECIAL_CHARS);
+    $parentGender = filter_input(INPUT_POST, "parentGender", FILTER_SANITIZE_SPECIAL_CHARS);
+    $parentHomeLanguage = filter_input(INPUT_POST, "parentHomeLanguage", FILTER_SANITIZE_SPECIAL_CHARS);
+    
+    $parentRelationship = filter_input(INPUT_POST, "parentRelationship", FILTER_SANITIZE_SPECIAL_CHARS);
+    $parentResidentialAddress = filter_input(INPUT_POST, "parentResidentialAddress", FILTER_SANITIZE_SPECIAL_CHARS);
+    $parentResidentialCode = filter_input(INPUT_POST, "parentResidentialCode", FILTER_SANITIZE_SPECIAL_CHARS);
+    
+    $secondParentTitle = filter_input(INPUT_POST, "secondParentTitle", FILTER_SANITIZE_SPECIAL_CHARS);
+    $secondParentInitials = filter_input(INPUT_POST, "secondParentInitials", FILTER_SANITIZE_SPECIAL_CHARS);
+    $secondParentFirstNames = filter_input(INPUT_POST, "secondParentFirstNames", FILTER_SANITIZE_SPECIAL_CHARS);
+    
+    $secondParentSurname = filter_input(INPUT_POST, "secondParentSurname", FILTER_SANITIZE_SPECIAL_CHARS);
+    $secondParentIdNumber = filter_input(INPUT_POST, "secondParentIdNumber", FILTER_SANITIZE_SPECIAL_CHARS);
+    $secondParentRelationship = filter_input(INPUT_POST, "secondParentRelationship", FILTER_SANITIZE_SPECIAL_CHARS);
+    
+    $secondParentGender = filter_input(INPUT_POST, "secondParentGender", FILTER_SANITIZE_SPECIAL_CHARS);
+    $secondParentHomeLanguage = filter_input(INPUT_POST, "secondParentHomeLanguage", FILTER_SANITIZE_SPECIAL_CHARS);
+    $secondParentRace = filter_input(INPUT_POST, "secondParentRace", FILTER_SANITIZE_SPECIAL_CHARS);
+
+    $secondParentResidentialAddress = filter_input(INPUT_POST, "secondParentResidentialAddress", FILTER_SANITIZE_SPECIAL_CHARS);
+    $secondParentResidentialCode = filter_input(INPUT_POST, "secondParentResidentialCode", FILTER_SANITIZE_SPECIAL_CHARS);
+    $secondParentContactNumber = filter_input(INPUT_POST, "secondParentContactNumber", FILTER_SANITIZE_SPECIAL_CHARS);
+    
+    if(empty($gradeAppliedFor)){
+        echo"please enter grade applied for";
+    }elseif(empty($highestGradePassed)){
+        echo"Please enter a password";
+    }
+    $sql = "INSERT INTO registration(gradeAppliedFor, highestGradePassed, yearWhenGradeWasPassed, firstName, lastName, initials,
+                        dateOfBirth, idNumber, contactNumber, race, province, gender, homeLanguage, residentialAddress,
+                        residentialCode, learnerEmailAddress, preferredLanguageOfInstruction, deceasedParent, dexterityOfLearner,
+                        hearingProblem, parentFirstNames, parentSurname, parentTitle, parentInitials, parentIdNumber, parentContactNumber,
+                        parentRace, parentGender, parentHomeLanguage, parentRelationship,parentResidentialAddress, parentResidentialCode,
+                        secondParentTitle, secondParentInitials, secondParentFirstNames, secondParentSurname, secondParentIdNumber,
+                        secondParentRelationship, secondParentGender, secondParentHomeLanguage, secondParentRace,
+                        secondParentResidentialAddress, secondParentResidentialCode, secondParentContactNumber)
+                        VALUES ('$gradeAppliedFor', '$highestGradePassed', '$yearWhenGradeWasPassed',
+                                '$firstName', '$lastName', '$initials', '$dateOfBirth', '$idNumber', '$contactNumber', '$race', '$province', '$gender', '$homeLanguage',
+                                '$residentialAddress', '$residentialCode', '$learnerEmailAddress', '$preferredLanguageOfInstruction', '$deceasedParent',
+                                '$dexterityOfLearner', '$hearingProblem', '$parentFirstNames', '$parentSurname', '$parentTitle', '$parentInitials', '$parentIdNumber',
+                                '$parentContactNumber', '$parentRace', '$parentGender', '$parentHomeLanguage', '$parentRelationship', '$parentResidentialAddress',
+                                '$parentResidentialCode', '$secondParentTitle', '$secondParentInitials', '$secondParentFirstNames', '$secondParentSurname',
+                                '$secondParentIdNumber', '$secondParentRelationship', '$secondParentGender', '$secondParentHomeLanguage', '$secondParentRace',
+                                '$secondParentResidentialAddress', '$secondParentResidentialCode', '$secondParentContactNumber')";
+
+    mysqli_query($con, $sql);
+    echo"You are now registered!";
+}
+mysqli_close($con);
+?>
