@@ -1,5 +1,5 @@
 
-const navigation= document.querySelector('.navigation');
+const navigation = document.querySelector('.navigation');
 
 // MOBILE TOGGLE NAVBAR
 
@@ -8,7 +8,7 @@ function showMenu(){
     navLinks.style.right= "0";
 }
 function hideMenu(){
-    navLinks.style.right= "-200px";
+    navLinks.style.right = "-200px";
 }
 
 // STICKY NAVBAR                            
@@ -36,10 +36,10 @@ nextBtn.addEventListener("click", ()=>{
             form.classList.remove('secActive');
             alert("input is empty");
         }
-    })
-})
+    });
+});
 submitBtn.addEventListener("click", ()=>{
     
-})
+});
 
 backBtn.addEventListener("click", () => form.classList.remove('secActive'));
