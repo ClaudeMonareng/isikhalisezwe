@@ -1,27 +1,16 @@
 <?php
 
     $name = $_POST['fullname'];
-    $visitor_email = $_POST['email'];
+    $email = $_POST['email'];
     $subject = $_POST['subject'];
     $message = $_POST['message'];
 
-    $email_from = 'info@yourwebsite.com';
+    $mailheader = "From: ".$name."<".$email.">\r\n";    
 
-    $email_subject = 'New Form Submission';
-
-    $email_body = "User Name: $name.\n".
-                    "User Email: $visitor_email.\n".
-                        "subject: $subject.\n".
-                            "User Message: $message.\n";
+    $recipient = "lehlohonolomonareng@yahoo.com";
     
-    $to = 'claude.monareng@outlook.com';
+    mail($recipient, $messasge, $mailheader) or die ("Error");
 
-    $headers = "From: $email_from \r\n";
-
-    $headers .= "Reply-To: $visitor_email \r\n";
-
-    mail($to, $email_subject, $email_body, $headers);
-
-    header("Location: contact.html");
+    echo"message sent";
 
 ?>

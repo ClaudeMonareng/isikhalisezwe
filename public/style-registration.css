@@ -65,7 +65,7 @@ body{
 }
 .container form .form{
     position: absolute;
-    background-color: #fff; 
+    background-color: #fff;
     transition: 0.3s ease;
 }
 
@@ -182,7 +182,7 @@ form .fields .input-field{
 .input-field input[type= "date"]:valid{
     color: #707070;
 }
-.container form button, .nextBtn, .backBtn, .submitBtn{
+.container form button, .nextBtn, .backBtn{
     display: flex; 
     align-items: center;
     justify-content: center;
@@ -199,25 +199,23 @@ form .fields .input-field{
     cursor: pointer;
 }
 .container form button,
-.container form .backBtn,
-.container form .submitBtn{
+.container form .backBtn{
     font-size: 14px;
     font-weight: 400;
 }
 form button:hover{
     background-color: #265df2;
 }
-form button i, .form .backBtn  i, .form .submitBtn i{
+form button i, .form .backBtn  i{
     margin: 0 6px;
 }
-form .backBtn i,
-form .submitBtn i{
+form .backBtn i{
     transform: rotate(180deg);
 }
 form .buttons{
     display: flex;
     align-items: center;
 }
-form .buttons button, .btnText, .backBtn, .submitBtn{
+form .buttons button, .btnText, .backBtn{
     margin-right: 14px;
 }

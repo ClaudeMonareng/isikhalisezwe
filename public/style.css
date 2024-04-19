@@ -10,10 +10,10 @@ img{
     vertical-align: middle;
 }
 header{
-    z-index: 99999;
+    z-index: 99998;
     position: fixed;
-    top: 0;
-    left: 0;
+    /* top: 0;
+    left: 0; */
     color:black;
     transition: .6s ease;
 }
@@ -67,14 +67,6 @@ header.sticky{
     outline:none;
 }
 
-/* BACKEND CODE */
-
-#registration-successful{
-    background-color: #46f436;
-    padding: 2em;
-    margin: 2em 12em;
-}
-
 /* NAVIGATION */
 
 nav{
@@ -82,6 +74,7 @@ nav{
     padding: 2% 6%;
     justify-content: space-between;
     align-items: center;
+    min-width: 100%;
     width: 84.5em;
     height:5em;
 }
@@ -254,7 +247,7 @@ h3{
     padding-top: 100px;
 }
 .learners-col{
-    flex-basis: 48%;
+    flex-basis: 38%;
     border-radius: 10px;
     margin-bottom: 30px;
     position: relative;
@@ -265,7 +258,6 @@ h3{
     width: 100%;
     display: block;
 }
-
 .layer{
     background: transparent;
     height: 100%;
@@ -295,7 +287,7 @@ h3{
 }
 .learners-col:hover{
     box-shadow: 0 0 20px 0px rgba(0, 0, 0, 0.2);
-    transform: scale(1.03);
+    transform: scale(1.02);
 }
 
 /* UPDATES */
@@ -343,11 +335,12 @@ h3{
     transform: scale(1.03);
 }
 .updates-col h3:hover{
-    color:#eeeeee;
+    color: #eeeeee;
 }
 a{
-    text-decoration:none;
+    text-decoration: none;
 }
+
 /* FACILITIES */
 /* INCLUDES COLUMNS AND IMAGES */
 
@@ -655,21 +648,22 @@ p{
         color: #fff;
         padding-bottom: 2em;
         padding-top: 2em;
-        width: 100em;
+        width: 27em;
         height: 70vh;
         left:0;
-        top: 0; 
+        top: 5rem; 
     }
     .text-box h1{
         font-size: 20px;
     }
     .text-box span{
-        font-size: 40px;
+        font-size: 20px;
         font-weight: 600;
-        background: linear-gradient(to top, white 20%, rgb(83, 83, 245) 70%);
+        /* background: linear-gradient(to top, white 20%, rgb(83, 83, 245) 70%); */
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
-        opacity: 1;
+        opacity: 0;
+        width:5rem;
     }
 
     /* TOGGLED MENU */
@@ -716,54 +710,5 @@ p{
 
     .cta h1{
         font-size: 24px;
-    }
-
-    /* UPDATES */
-    /* INCOMING EVENTS AND NEWSLETTER */
-    
-    .stay-tuned{
-       color: black;
-    }
-    .incoming-events .events h1{
-        background-color:blueviolet;
-        padding: 0.4em 2.5em;
-        text-transform: uppercase;
-    }
-    .incoming-newsletter .newsletter h1{
-        background-color:cadetblue;
-        padding: 1em 2em;
-        text-transform: uppercase;
-    }
-    .updates{
-        /* background: purple; */
-        padding-top: 15%;
-        display: grid;
-    }
-    .incoming-events, .incoming-newsletter{
-        background-color: #3c2aff;
-        margin: 1em 1em;
-        width: 25em;
-    }
-    .events-newsletter{
-        width: 0em;
-    }
-    .newsletter a{
-        text-decoration: none;
-    }
-    .incoming-events:hover, .incoming-newsletter:hover{
-        box-shadow: 0 0 20px 0px rgba(0, 0, 0, 0.2);
-    }
-    .events div span, .newsletter div span{
-        color: rgb(255, 153, 0);
-        text-transform: uppercase;
-    }
-    .incoming-newsletter .newsletter{
-        /* background-color:#4936f4; */
-    }
-    .incoming-events .events .continue-btn{
-        /* background-color:#f44336; */
-    }
-    .incoming-newsletter .newsletter .continue-btn{
-        /* background-color:chocolate; */
     }
 }

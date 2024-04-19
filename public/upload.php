@@ -1,7 +1,6 @@
 <?php
     include("connect.php");
 
-    // $con = new mysqli($servername, $username, $password, $dbname);
     if($con->connect_error){
         die("connection failed: " . $con->connect_error);
     }
@@ -23,8 +22,7 @@
             echo "Error Moving the file";
         }
     }else{
-       echo "File not uploaded";
+       echo "";
     }
     // $con->close();
 ?>
-

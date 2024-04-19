@@ -252,8 +252,10 @@
                                 <label>Contact Number</label>
                                 <input type="text" name="secondParentContactNumber" placeholder="contactNumber" required >
                             </div>
-                            <label>Upload File</label>
-                            <input type="file" name="file">
+                            <div class="input-field">
+                                <label>Upload File</label>
+                                <input type="file" name="file">
+                            </div>
                         </div>
                     </div>
                     <div class="buttons">
@@ -262,7 +264,7 @@
                             <i class="uil uil-navigator"></i>
                         </div>
                         <div class="submitBtn">
-                            <input type="submit" name="submit" value="Submit">
+                            <input type="submit" name="submit">
                             <i class="uil uil-envelope-send"></i>
                         </div>
                     </div>
@@ -365,5 +367,5 @@
             echo"Sorry you could not register. Please try later";
         }
     }
-    mysqli_close($con);
+    // mysqli_close($con);
 ?>
