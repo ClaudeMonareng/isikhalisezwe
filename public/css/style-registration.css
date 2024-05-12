@@ -117,7 +117,7 @@ nav .fa{
     display: none;
 }
 
-/* second form */
+/* SECOND FORM */
 
 .container form .form.second{
     opacity: 0;
@@ -130,7 +130,7 @@ form.secActive .form.second{
     transform: translateX(0);
 }
 
-/* first form */
+/* FIRST FORM */
 
 form.secActive .form.first{
     opacity: 0;

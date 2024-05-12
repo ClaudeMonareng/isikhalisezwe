@@ -70,23 +70,23 @@ nav img{
 }
 .text-box p{
     margin: 10px 0 40px;
-    font-size: 14px;   
+    font-size: 14px;
     color: #fff;
 }
 
 /* MORE INFORMATION BUTTON */
 
 .hero-btn{
+    border: 1px solid #ffffff;
+    background: transparent;
     display: inline-block;
     text-decoration: none;
-    color:#eeeeee;
-    border: 1px solid #ffffff;
-    padding: 12px 34px;
-    font-size: 13px;
-    background: transparent;
     border-radius: 0.3em;
     position: relative;
+    padding: 12px 34px;
+    color:#eeeeee;
     cursor: pointer;
+    font-size: 13px;
 }
 .hero-btn:hover{
     background-color: #3246ff;
@@ -210,7 +210,8 @@ header{
     background-image: linear-gradient(rgba(4, 9, 30, 0.5), rgba(4, 9, 30, 0.5));
     box-shadow: 0px 0px 20px rgb(0 0 0 / 10%);
 }
-/* MOBILE TOGGLR ENDS */
+
+/* MOBILE TOGGLE ENDS */
 
 .section{
     padding: 2em;
@@ -551,12 +552,6 @@ p{
 
 /* ABOUT PAGE */
 
-/* .about-us{
-    margin: 2.5em 2.5em;
-    padding: 2.5em;
-    width: 80em;
-} */
-
 .about-col{
     flex-basis: 48%;
     padding: 30px 2px;
@@ -659,9 +654,6 @@ p{
 /* MEDIA QUERY MAX-WIDTH 730px */
 
 @media screen and (max-width: 730px){
-    /* .text-box-wrapper{
-        margin-left: -40em;
-    } */
     .text-box-wrapper{
         min-height: 100vh;
         background-image: linear-gradient(rgba(4, 9, 30, 0.5), rgba(4, 9, 30, 0.5)), url(images/isikhali01.jpg);
