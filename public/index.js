@@ -28,7 +28,7 @@ backBtn = form.querySelector(".backBtn"),
 submitBtn = form.querySelector(".submitBtn"),
 allInput = form.querySelectorAll(".first input");
 
-nextBtn.addEventListener("click", ()=>{
+nextBtn.addEventListener("click", () => {
     allInput.forEach(input => {
         if(input.value != ""){
             form.classList.add('secActive');
@@ -38,8 +38,8 @@ nextBtn.addEventListener("click", ()=>{
         }
     });
 });
-submitBtn.addEventListener("click", ()=>{
-    
+
+submitBtn.addEventListener("click", () => {
 });
 
 backBtn.addEventListener("click", () => form.classList.remove('secActive'));
