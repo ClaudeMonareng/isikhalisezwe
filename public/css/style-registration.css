@@ -122,7 +122,7 @@ nav .fa{
 .container form .form.second{
     opacity:0;
     pointer-events: none;
-    transform:translateX(100%);
+    transform: translateX(100%);
 }
 form.secActive .form.second{
     opacity:1;

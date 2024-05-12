@@ -13,13 +13,13 @@
              if($con->query($sql) == true){
                  echo"File uploaded and saved to Database";
              }else{
-                 echo "Error: ".$sql. "Error Details: ".$con->error;            
+                 echo"Error: ".$sql. "Error Details: ".$con->error;            
              }
          }else{
-             echo "Error Moving the file";
+             echo"Error Moving the file";
          }
      }else{
-        echo "";
+        echo"";
      }
 
      if(isset($_POST['user_register'])){
@@ -191,7 +191,7 @@
           $secondParentSurname = mysqli_real_escape_string($con, $_POST['secondParentSurname']);
           $secondParentIdNumber = mysqli_real_escape_string($con, $_POST['secondParentIdNumber']);
           $secondParentRelationship = mysqli_real_escape_string($con, $_POST['secondParentRelationship']);
-          
+
           $secondParentGender = mysqli_real_escape_string($con, $_POST['secondParentGender']);
           $secondParentHomeLanguage = mysqli_real_escape_string($con, $_POST['secondParentHomeLanguage']);
           $secondParentRace = mysqli_real_escape_string($con, $_POST['secondParentRace']);
