@@ -22,7 +22,7 @@
         echo "";
      }
 
-     if(isset($_POST['user_register'])){  
+     if(isset($_POST['user_register'])){
 
           // Learner Personal Details
 
@@ -129,7 +129,7 @@
           }
      }
 
-     if(isset($_POST['save_learner'])){  
+     if(isset($_POST['save_learner'])){
           
           // Learner Personal Details
 
