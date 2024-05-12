@@ -14,10 +14,10 @@ function hideMenu(){
 // STICKY NAVBAR                            
 // NAVIGATION BAR EFFECTS ON SCROLL 
 
-window.addEventListener("scroll", function(){
-    const header = document.querySelector("header");
-    header.classList.toggle("sticky", window.scrollY > 0);
-});
+// window.addEventListener("scroll", function(){
+//     const header = document.querySelector("header");
+//     header.classList.toggle("sticky", window.scrollY > 0);
+// });
 
 // REGISTRATION FORM
 

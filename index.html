@@ -4,39 +4,36 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Isikhalisezwe Website | Home</title>
-        <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" href="./public/style.css">
         <link rel="preconnect" href="https://fonts.gstatic.com">
         <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;600;700&display=swap" rel="stylesheet">
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
     </head>
     <body>
-        <header>
+        <section class="header">
             <nav>
-                <a href="index.html"><img src="images/logo2.png" alt=""></a>
-                <div class="nav-links" id="navLinks">
-                    <i class="fa fa-times" onclick="hideMenu()"></i>
+                <a href="index.html"><img src="./public/images/logo2.png"></a>
+                <div class="nav-links">
                     <ul>
-                        <li><a href="index.html">Home</a></li>
-                        <li><a href="about.html">About</a></li>
-                        <li><a href="subjects.html">Subjects</a></li>
-                        <li><a href="https://claudemonareng.github.io/fine-point/">Blog</a></li>
-                        <li><a href="contact-us.html">Contact Us</a></li>
+                        <li><a href="index.html">HOME</a></li>
+                        <li><a href="/public/about.html">ABOUT</a></li>
+                        <li><a href="/public/subjects.html">SUBJECTS </a></li>
+                        <li><a href="https://claudemonareng.github.io/fine-point">BLOG</a></li>
+                        <li><a href="/public/learning_portal.html">LEARNING PORTAL</a></li>
+                        <li><a href="/public/contact-us.html">CONTACT US</a></li>
                     </ul>
                 </div>
-                <i class="fa fa-bars" onclick="showMenu()"></i>
             </nav>
-        </header>
-        <section class="text-box-wrapper">
-            <section class="text-box">
-                <h1><span>ISIKHALISEZWE</span> <br> High School</h1>
+            <div class="text-box">
+                <h1><span>ISIKHALISEZWE</span><br> High School</h1>
                 <p>Imfundo Yisikhali</p>
-                <a href="contact-us.html" class="hero-btn">Visit Us To Know More</a>
-            </section>
+                <a href="" class="hero-btn">Visit Us To Know More</a>
+            </div>
         </section>
-
+        
         <!-- GRADES/SUBJECTS -->
-
-        <section class="grades">
+        
+        <section class="grades section">
             <h1>Subjects We Offer</h1>
             <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Iste, minus.</p>
         
@@ -58,35 +55,35 @@
 
         <!-- LEARNERS ACTIVITIES-->
 
-        <section class="learners">
+        <section class="learners section">
             <h1>Our learners</h1>
             <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit.</p>
             
             <div class="row">
                 <div class="learners-col">
-                    <img src="./images/academics.jpg" alt="Academics">
+                    <img src="./public/images/academics.jpg" alt="Academics">
                     <div class="layer">
-                        <a href="curriculum.html"><h3>Academics</h3></a>
+                        <a href="./public/curriculum.html"><h3>Academics</h3></a>
                     </div>
                 </div>
                 <div class="learners-col">
-                    <img src="./images/sports.png" alt="Sports">
+                    <img src="./public/images/20240501_114959 - Copy.jpg" alt="Sports">
                     <div class="layer">
-                        <a href="sports.html"><h3>Sports</h3></a>
+                        <a href="./public/sports.html"><h3>Sports</h3></a>
                     </div>
                 </div>
             </div>
             <div class="row">
                 <div class="learners-col">
-                    <img src="./images/culture.jpg" alt="Cultural">
+                    <img src="./public/images/culture.jpg" alt="Cultural">
                     <div class="layer">
-                        <a href="cultural.html"><h3>Cultural</h3></a>
+                        <a href="./public/cultural.html"><h3>Cultural</h3></a>
                     </div>
                 </div> 
                 <div class="learners-col">
-                    <img src="./images/social-outreach.jpg" alt="Community Outreach">
+                    <img src="./public/images/social-outreach.jpg" alt="Community Outreach">
                     <div class="layer">
-                        <a href="community-outreach.html"><h3>Community Outreach</h3></a>
+                        <a href="./public/community-outreach.html"><h3>Community Outreach</h3></a>
                     </div>
                 </div>
             </div>
@@ -94,22 +91,22 @@
         
         <!-- FACILITIES -->
 
-        <section class="facilities">
+        <section class="facilities section">
             <h1>Our Facilities</h1>
             <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Fugiat, accusantium!</p>
             <div class="row">
                 <div class="facilities-col">
-                    <img src="./images/Library 20240312_124331.jpg" alt="Library">
+                    <img src="./public/images/Library 20240312_124331.jpg" alt="Library">
                     <h3>World Class Library</h3>
                     <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Vel, ut.</p>
                 </div>
                 <div class="facilities-col">
-                    <img src="./images/play20240312_124228.jpg" alt="playgrounds">
+                    <img src="./public/images/play20240312_124228.jpg" alt="playgrounds">
                     <h3>Largest Play Ground</h3>
                     <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Vel, ut.</p>
                 </div>
                 <div class="facilities-col">
-                    <img src="./images/food20240312_124142.jpg" alt="cafeteria">
+                    <img src="./public/images/food20240312_124142.jpg" alt="cafeteria">
                     <h3>Tasty and Healthy Food</h3>
                     <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Vel, ut.</p>
                 </div>
@@ -118,7 +115,7 @@
 
         <!-- INCOMING EVENTS -->
 
-        <section class="updates">
+        <section class="updates section">
             <h1>Stay in touch with the latest</h1>
             <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Iste, minus.</p>
         
@@ -142,13 +139,13 @@
        
         <!-- TESTIMONIALS -->
 
-        <section class="testimonials">
+        <section class="testimonials section">
             <h1>What our learners say</h1>
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita, reiciendis.</p>
 
             <div class="testimonials-row">
                 <div class="testimonial-col">
-                    <img src="./images/testimony.jpg" alt="testimonials">
+                    <img src="./public/images/testimony.jpg" alt="testimonials">
                     <div>
                         <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dolores quibusdam iste iusto velit rem necessitatibus atque animi tempore voluptas officiis.</p>
                         <h3>Lehlohonolo Monareng</h3>
@@ -160,7 +157,7 @@
                     </div>
                 </div>
                 <div class="testimonial-col">
-                    <img src="./images/testimonial.jpg" alt="testimonials">
+                    <img src="./public/images/testimonial.jpg" alt="testimonials">
                     <div>
                         <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dolores quibusdam iste iusto velit rem necessitatibus atque animi tempore voluptas officiis.</p>
                         <h3>Wandile Shoba</h3>
@@ -174,7 +171,7 @@
             </div>
             <div class="testimonials-row">
                 <div class="testimonial-col">
-                    <img src="./images/testimony.jpg" alt="testimonials">
+                    <img src="./public/images/testimony.jpg" alt="testimonials">
                     <div>
                         <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dolores quibusdam iste iusto velit rem necessitatibus atque animi tempore voluptas officiis.</p>
                         <h3>Lehlohonolo Monareng</h3>
@@ -186,7 +183,7 @@
                     </div>
                 </div>
                 <div class="testimonial-col">
-                    <img src="./images/testimonial.jpg" alt="testimonials">
+                    <img src="./public/images/testimonial.jpg" alt="testimonials">
                     <div>
                         <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dolores quibusdam iste iusto velit rem necessitatibus atque animi tempore voluptas officiis.</p>
                         <h3>Wandile Shoba</h3>
@@ -198,19 +195,18 @@
                     </div>
                 </div>
             </div>
-            <!-- <button type="submit" href="testimonies.html" class="continue-btn" id="continue-btn">More Testimonies</button> -->
         </section>
 
         <!-- CALL TO ACTION -->
 
-        <section class="cta">
+        <section class="cta section">
             <h1>Admissions <span>2025</span></h1>
-            <a href="registration-form.php" class="hero-btn">Online Registration Welcome</a>
+            <a href="./public/registration-form.php" class="hero-btn">Online Registration Welcome</a>
         </section>
         
         <!-- FOOTER -->
 
-        <section class="footer">
+        <section class="footer section">
             <h4>ISIKHALISEZWE HIGH SCHOOL</h4>
             <p>Imfundo Yisikhali</p>
             
@@ -226,6 +222,6 @@
 
         <!---------- JavaScript FOR TOGGLE MENU -------->
 
-        <script src="index.js"></script>
+        <script src="./public/index.js"></script>
     </body>
 </html>

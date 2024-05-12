@@ -24,6 +24,7 @@
                         <li><a href="about.html">About</a></li>
                         <li><a href="subjects.html">Subjects</a></li>
                         <li><a href="https://claudemonareng.github.io/fine-point/">Blog</a></li>
+                        <li><a href="login.php">Admin Page</a></li>
                         <li><a href="contact-us.html">Contact Us</a></li>
                     </ul>
                 </div>
@@ -35,16 +36,16 @@
 
             <?php
                 include("connect.php");
-                include("upload.php");
+                include("code.php");
             ?>
 
             <header>Online Registration</header>
 
-            <form action="<?php htmlspecialchars($_SERVER["PHP_SELF"]) ?>" method= "post" enctype= "multipart/form-data">
+            <form action="code.php" method="post" enctype="multipart/form-data">
                 <div class="form first">
                     <div class="details personal">
                         <span class="title">Learner Personal Details</span>
-
+                        
                         <div class="fields">
                             <div class="input-field">
                                 <label>Grade Applied for</label>
@@ -254,7 +255,7 @@
                             </div>
                             <div class="input-field">
                                 <label>Upload File</label>
-                                <input type="file" name="file">
+                                <input type="file" name="files">
                             </div>
                         </div>
                     </div>
@@ -264,7 +265,8 @@
                             <i class="uil uil-navigator"></i>
                         </div>
                         <div class="submitBtn">
-                            <input type="submit" name="submit">
+                            <button type="submit" name="user_register">Submit</button>
+                            <!-- <input type="" name="user_register" value="Submit"> -->
                             <i class="uil uil-envelope-send"></i>
                         </div>
                     </div>
@@ -274,98 +276,3 @@
         <script src="index.js"></script>
     </body>
 </html>
-
-<?php
-
-    if($_SERVER["REQUEST_METHOD"] == "POST"){
-        
-        $gradeAppliedFor = filter_input(INPUT_POST, "gradeAppliedFor", FILTER_SANITIZE_SPECIAL_CHARS);
-        $highestGradePassed = filter_input(INPUT_POST, "highestGradePassed", FILTER_SANITIZE_SPECIAL_CHARS);
-        $yearWhenGradeWasPassed = filter_input(INPUT_POST, "yearWhenGradeWasPassed", FILTER_SANITIZE_SPECIAL_CHARS);
-        
-        $firstName = filter_input(INPUT_POST, "firstName", FILTER_SANITIZE_SPECIAL_CHARS);
-        $lastName = filter_input(INPUT_POST, "lastName", FILTER_SANITIZE_SPECIAL_CHARS);
-        $initials = filter_input(INPUT_POST, "initials", FILTER_SANITIZE_SPECIAL_CHARS);
-        
-        $dateOfBirth = filter_input(INPUT_POST, "dateOfBirth", FILTER_SANITIZE_SPECIAL_CHARS);
-        $idNumber = filter_input(INPUT_POST, "idNumber", FILTER_SANITIZE_SPECIAL_CHARS);
-        $contactNumber = filter_input(INPUT_POST, "contactNumber", FILTER_SANITIZE_SPECIAL_CHARS);
-        
-        $race = filter_input(INPUT_POST, "race", FILTER_SANITIZE_SPECIAL_CHARS);
-        $province = filter_input(INPUT_POST, "province", FILTER_SANITIZE_SPECIAL_CHARS);
-        $gender = filter_input(INPUT_POST, "gender", FILTER_SANITIZE_SPECIAL_CHARS);
-        
-        $homeLanguage = filter_input(INPUT_POST, "homeLanguage", FILTER_SANITIZE_SPECIAL_CHARS);
-        $residentialAddress = filter_input(INPUT_POST, "residentialAddress", FILTER_SANITIZE_SPECIAL_CHARS);
-        $residentialCode = filter_input(INPUT_POST, "residentialCode", FILTER_SANITIZE_SPECIAL_CHARS);
-        
-        $learnerEmailAddress = filter_input(INPUT_POST, "learnerEmailAddress", FILTER_SANITIZE_SPECIAL_CHARS);
-        $preferredLanguageOfInstruction = filter_input(INPUT_POST, "preferredLanguageOfInstruction", FILTER_SANITIZE_SPECIAL_CHARS);
-        $deceasedParent = filter_input(INPUT_POST, "deceasedParent", FILTER_SANITIZE_SPECIAL_CHARS);
-        
-        $dexterityOfLearner = filter_input(INPUT_POST, "dexterityOfLearner", FILTER_SANITIZE_SPECIAL_CHARS);
-        $hearingProblem = filter_input(INPUT_POST, "hearingProblem", FILTER_SANITIZE_SPECIAL_CHARS);
-        
-        $parentFirstNames = filter_input(INPUT_POST, "parentFirstNames", FILTER_SANITIZE_SPECIAL_CHARS);
-        $parentSurname = filter_input(INPUT_POST, "parentSurname", FILTER_SANITIZE_SPECIAL_CHARS);
-        $parentTitle = filter_input(INPUT_POST, "parentTitle", FILTER_SANITIZE_SPECIAL_CHARS);
-        
-        $parentInitials = filter_input(INPUT_POST, "parentInitials", FILTER_SANITIZE_SPECIAL_CHARS);
-        $parentIdNumber = filter_input(INPUT_POST, "parentIdNumber", FILTER_SANITIZE_SPECIAL_CHARS);
-        $parentContactNumber = filter_input(INPUT_POST, "parentContactNumber", FILTER_SANITIZE_SPECIAL_CHARS);
-        
-        $parentRace = filter_input(INPUT_POST, "parentRace", FILTER_SANITIZE_SPECIAL_CHARS);
-        $parentGender = filter_input(INPUT_POST, "parentGender", FILTER_SANITIZE_SPECIAL_CHARS);
-        $parentHomeLanguage = filter_input(INPUT_POST, "parentHomeLanguage", FILTER_SANITIZE_SPECIAL_CHARS);
-        
-        $parentRelationship = filter_input(INPUT_POST, "parentRelationship", FILTER_SANITIZE_SPECIAL_CHARS);
-        $parentResidentialAddress = filter_input(INPUT_POST, "parentResidentialAddress", FILTER_SANITIZE_SPECIAL_CHARS);
-        $parentResidentialCode = filter_input(INPUT_POST, "parentResidentialCode", FILTER_SANITIZE_SPECIAL_CHARS);
-        
-        $secondParentTitle = filter_input(INPUT_POST, "secondParentTitle", FILTER_SANITIZE_SPECIAL_CHARS);
-        $secondParentInitials = filter_input(INPUT_POST, "secondParentInitials", FILTER_SANITIZE_SPECIAL_CHARS);
-        $secondParentFirstNames = filter_input(INPUT_POST, "secondParentFirstNames", FILTER_SANITIZE_SPECIAL_CHARS);
-        
-        $secondParentSurname = filter_input(INPUT_POST, "secondParentSurname", FILTER_SANITIZE_SPECIAL_CHARS);
-        $secondParentIdNumber = filter_input(INPUT_POST, "secondParentIdNumber", FILTER_SANITIZE_SPECIAL_CHARS);
-        $secondParentRelationship = filter_input(INPUT_POST, "secondParentRelationship", FILTER_SANITIZE_SPECIAL_CHARS);
-        
-        $secondParentGender = filter_input(INPUT_POST, "secondParentGender", FILTER_SANITIZE_SPECIAL_CHARS);
-        $secondParentHomeLanguage = filter_input(INPUT_POST, "secondParentHomeLanguage", FILTER_SANITIZE_SPECIAL_CHARS);
-        $secondParentRace = filter_input(INPUT_POST, "secondParentRace", FILTER_SANITIZE_SPECIAL_CHARS);
-
-        $secondParentResidentialAddress = filter_input(INPUT_POST, "secondParentResidentialAddress", FILTER_SANITIZE_SPECIAL_CHARS);
-        $secondParentResidentialCode = filter_input(INPUT_POST, "secondParentResidentialCode", FILTER_SANITIZE_SPECIAL_CHARS);
-        $secondParentContactNumber = filter_input(INPUT_POST, "secondParentContactNumber", FILTER_SANITIZE_SPECIAL_CHARS);
-        
-        if(empty($gradeAppliedFor)){
-            echo"please enter grade applied for";
-        }elseif(empty($highestGradePassed)){
-            echo"Please enter a password";
-        }
-        $sql = "INSERT INTO registration(gradeAppliedFor, highestGradePassed, yearWhenGradeWasPassed, firstName, lastName, initials,
-                            dateOfBirth, idNumber, contactNumber, race, province, gender, homeLanguage, residentialAddress,
-                            residentialCode, learnerEmailAddress, preferredLanguageOfInstruction, deceasedParent, dexterityOfLearner,
-                            hearingProblem, parentFirstNames, parentSurname, parentTitle, parentInitials, parentIdNumber, parentContactNumber,
-                            parentRace, parentGender, parentHomeLanguage, parentRelationship,parentResidentialAddress, parentResidentialCode,
-                            secondParentTitle, secondParentInitials, secondParentFirstNames, secondParentSurname, secondParentIdNumber,
-                            secondParentRelationship, secondParentGender, secondParentHomeLanguage, secondParentRace,
-                            secondParentResidentialAddress, secondParentResidentialCode, secondParentContactNumber)
-                            VALUES ('$gradeAppliedFor', '$highestGradePassed', '$yearWhenGradeWasPassed',
-                                    '$firstName', '$lastName', '$initials', '$dateOfBirth', '$idNumber', '$contactNumber', 
-                                    '$race', '$province', '$gender', '$homeLanguage','$residentialAddress', '$residentialCode', 
-                                    '$learnerEmailAddress', '$preferredLanguageOfInstruction', '$deceasedParent','$dexterityOfLearner', 
-                                    '$hearingProblem', '$parentFirstNames', '$parentSurname', '$parentTitle', '$parentInitials', 
-                                    '$parentIdNumber','$parentContactNumber', '$parentRace', '$parentGender', '$parentHomeLanguage', 
-                                    '$parentRelationship', '$parentResidentialAddress','$parentResidentialCode','$secondParentTitle', 
-                                    '$secondParentInitials', '$secondParentFirstNames', '$secondParentSurname','$secondParentIdNumber', 
-                                    '$secondParentRelationship', '$secondParentGender', '$secondParentHomeLanguage','$secondParentRace',
-                                    '$secondParentResidentialAddress', '$secondParentResidentialCode', '$secondParentContactNumber')";
-        try{
-            mysqli_query($con, $sql);
-        }catch(mysqli_sql_exception){
-            echo"Sorry you could not register. Please try later";
-        }
-    }
-    // mysqli_close($con);
-?>

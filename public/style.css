@@ -4,23 +4,74 @@
     margin: 0;
     padding: 0;
     font-family: 'Poppins', sans-serif;
-    box-sizing:border-box;
+    box-sizing: border-box;
 }
 img{
     vertical-align: middle;
 }
-header{
-    z-index: 99998;
-    position: fixed;
-    /* top: 0;
-    left: 0; */
-    color:black;
-    transition: .6s ease;
+.header{
+    min-height: 100vh;
+    width: 100%;
+    background-image: linear-gradient(rgba(4, 9, 30, .7), rgba(4, 9, 30, .7)), url(images/isikhali01.jpg);
+    background-position: center;
+    background-size: cover;
+    max-width: 1150px;
+    margin-left: auto;
+    margin-right: auto;
 }
-header.sticky{
-    backdrop-filter: blur(20px);
-    background-image: linear-gradient(rgba(4, 9, 30, 0.5), rgba(4, 9, 30, 0.5));
-    box-shadow: 0px 0px 20px rgb(0 0 0 / 10%);
+nav{
+    display: flex;
+    padding: 2% 6%;
+    justify-content: space-between;
+    align-items: center;
+}
+nav img{
+    width: 150px;
+}
+.nav-links{
+    flex:1;
+    text-align: right;
+}
+.nav-links ul li{
+    list-style: none;
+    display: inline-block;
+    padding: 8px 12px;
+    position: relative;
+    text-transform: uppercase;
+}
+.nav-links ul li a{
+    color: #fff;
+    text-decoration: none;
+    font-size: 13px;
+}
+.nav-links ul li::after{
+    content: '';
+    width: 0%;
+    height: 2px;
+    background: #f44336;
+    display: block;
+    margin: auto;
+    transition: .5s;
+}
+.nav-links ul li:hover::after{
+    width:100%
+}
+.text-box{
+    width: 90%;
+    color: #fff;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+.text-box h1{
+    font-size: 62px;
+}
+.text-box p{
+    margin: 10px 0 40px;
+    font-size: 14px;   
+    color: #fff;
 }
 
 /* MORE INFORMATION BUTTON */
@@ -42,8 +93,8 @@ header.sticky{
     border-radius: 1em;
     transition: 0.2s;
     color: white;
-}
-
+} 
+ 
 /* SEND BUTTON */
 
 .send-btn{
@@ -64,63 +115,14 @@ header.sticky{
     border-radius: 1em;
     transition: 0.2s;
     color: white;
-    outline:none;
-}
-
-/* NAVIGATION */
-
-nav{
-    display: flex;
-    padding: 2% 6%;
-    justify-content: space-between;
-    align-items: center;
-    min-width: 100%;
-    width: 84.5em;
-    height:5em;
-}
-nav img{
-    width: 150px;
-}
-
-/* NAV LINKS */
-
-.nav-links{
-    flex: 1;
-    text-align: right;
-}
-.nav-links ul li{
-    list-style: none;
-    display: inline-block;
-    padding: 8px 12px;
-    position: relative;
-}
-.nav-links ul li a{
-    color: #fff;
-    text-decoration: none;
-    font-size: 14px;
-    text-transform: uppercase;
-}
-.nav-links ul li::after{
-    content: '';
-    width: 0%;
-    height: 2px;
-    background: #f44336;
-    display: block;
-    margin: auto;
-    transition: 0.5s;
-}
-.nav-links ul li:hover::after{
-    width: 100%;
-}
-nav .fa{
-    display:none;
+    outline: none;
 }
 
 /* TEXT BOX */
 /* INCLUDES NAME OF THE SCHOOL, TAG LINE AND KNOW MORE BUTTON */
 
 .text-box-wrapper{
-    min-height: 100vh;
+    min-height: 70vh;
     background-image: linear-gradient(rgba(4, 9, 30, 0.5), rgba(4, 9, 30, 0.5)), url(images/isikhali01.jpg);
     background-position: center;
     background-size: cover;
@@ -191,6 +193,33 @@ nav .fa{
     transition: 0.2s;
     color: white;
     outline:none;
+}
+header{
+    z-index: 99998;
+    position: fixed;
+    top: 0;
+    left: 0;
+    color:black;
+    transition: .6s ease;
+}
+
+/* MOBILE TOGGLE HEADER */
+
+header{
+    backdrop-filter: blur(20px);
+    background-image: linear-gradient(rgba(4, 9, 30, 0.5), rgba(4, 9, 30, 0.5));
+    box-shadow: 0px 0px 20px rgb(0 0 0 / 10%);
+}
+/* MOBILE TOGGLR ENDS */
+
+.section{
+    padding: 2em;
+    text-align: center;
+    position: relative;
+    max-width: 1150px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 6rem 2rem 2rem;
 }
 
 /* GRADES */
@@ -522,12 +551,12 @@ p{
 
 /* ABOUT PAGE */
 
-.about-us{
-    /* background-color: darkorange; */
+/* .about-us{
     margin: 2.5em 2.5em;
     padding: 2.5em;
     width: 80em;
-}
+} */
+
 .about-col{
     flex-basis: 48%;
     padding: 30px 2px;
@@ -590,8 +619,10 @@ p{
 .contact-col textarea{
     height: 4em;
 }
+
 /* UPDATES */
 /* INCLUDES INCOMING EVENTS AND NEWSLETTER */
+
 .updates .row .updates-col a h3{
     text-decoration: none;
 }

@@ -27,7 +27,7 @@ body{
     display: flex;
     align-items: center;
     justify-content: center;
-    background-image: linear-gradient(rgba(4, 9, 30, 0.5), rgba(4, 9, 30, 0.5)), url(images/isikhali01.jpg);
+    background:#e4e9f7;
 }
 .container{
     position: relative;
@@ -38,7 +38,7 @@ body{
     padding: 100px;
     margin: 6em 15px;
     background-color: #fff;
-    /* box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1); */
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
 }
 .container header{
     position: relative;
@@ -162,7 +162,7 @@ form .fields .input-field{
     font-weight: 500;
     color: #2e2e2e;
 }
-.input-field input{
+.input-field input, .submitBtn{
     outline: none;
     font-size: 14px;
     font-weight: 400;
@@ -182,7 +182,8 @@ form .fields .input-field{
 .input-field input[type= "date"]:valid{
     color: #707070;
 }
-.container form button, .nextBtn, .backBtn{
+.container form button, .nextBtn,
+.backBtn, .submitBtn{
     display: flex; 
     align-items: center;
     justify-content: center;
@@ -199,14 +200,16 @@ form .fields .input-field{
     cursor: pointer;
 }
 .container form button,
-.container form .backBtn{
+.container form .backBtn,
+.container form .submitBtn{
     font-size: 14px;
     font-weight: 400;
 }
 form button:hover{
     background-color: #265df2;
 }
-form button i, .form .backBtn  i{
+form button i, .form .backBtn  i, 
+form .submitBtn{
     margin: 0 6px;
 }
 form .backBtn i{
@@ -216,6 +219,7 @@ form .buttons{
     display: flex;
     align-items: center;
 }
-form .buttons button, .btnText, .backBtn{
+form .buttons button, .btnText,
+.backBtn, .submitBtn{
     margin-right: 14px;
 }
