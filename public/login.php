@@ -21,7 +21,7 @@
                     </div>
                     <div class="field">
                         <input type="submit" name="submit" class="btn" value="Login">
-                        <a href="../index.html" class="btn">Return Main</a>
+                        <input type="text" href="../index.html" class="btn" value="Return Main">
                     </div>
                 </form>
             </div>
