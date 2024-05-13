@@ -16,11 +16,11 @@
     <body>
         <header>
             <nav>
-                <a href="index.html"><img src="images/logo2.png" alt=""></a>
+                <a href="../index.html"><img src="images/logo2.png" alt=""></a>
                 <div class="nav-links" id="navLinks">
                     <i class="fa fa-times" onclick="hideMenu()"></i>
                     <ul>
-                        <li><a href="index.html">Home</a></li>
+                        <li><a href="../index.html">Home</a></li>
                         <li><a href="about.html">About</a></li>
                         <li><a href="subjects.html">Subjects</a></li>
                         <li><a href="https://claudemonareng.github.io/fine-point/">Blog</a></li>
@@ -266,7 +266,6 @@
                         </div>
                         <div class="submitBtn">
                             <button type="submit" name="user_register">Submit</button>
-                            <!-- <input type="" name="user_register" value="Submit"> -->
                             <i class="uil uil-envelope-send"></i>
                         </div>
                     </div>

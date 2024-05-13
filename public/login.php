@@ -9,35 +9,8 @@
     <body>
         <div class="container">
             <div class="box form-box">
-
-                <?php
-
-                    include("connect.php");
-                    if(isset($_POST['submit'])){
-                        $username = mysqli_real_escape_string($con, $_POST['username']);
-                        $password = mysqli_real_escape_string($con, $_POST['password']);
-
-                        $result = mysqli_query($con, "SELECT * FROM users WHERE Username='lehlohonolomonareng@yahoo.com' AND Password='HSMQTQwpj248!' ") or die("Select Error");
-                        $row = mysqli_fetch_assoc($result);
-
-                        if(is_array($row) && !empty($row)){
-                            $_SESSION['username'] = $row['Username'];
-                            $_SESSION['password'] = $row['Password'];
-                        }else{
-                            echo    "<div class='message'>
-                                        <p>Wrong Username or Password </p>
-                                    </div><br>";
-                            echo    "<a href='login.php'><button class='btn'>Go Back</button>";
-                        }
-                        if(isset($_SESSION['valid'])){
-                            header("Location: index.php");
-                        }
-                    }else{       
-
-                ?>
-
                 <header>Login Page</header>
-                <form action="" method="post">
+                <form action="login.php" method="post">
                     <div class="field input">
                         <label for="username">Username</label>
                         <input type="text" name="username" id="username">
@@ -51,7 +24,20 @@
                     </div>
                 </form>
             </div>
-            <?php } ?>
+            <?php 
+                if(isset($_POST["submit"])){
+
+                    if(!empty($_POST["username"]) && !empty($_POST["password"])){
+
+                        $_SESSION["username"] = $_POST["username"];
+                        $_SESSION["password"] = $_POST["password"];
+
+                        header("Location: index.php");
+                    }else{
+                        echo"Missing username/password <br>";
+                    }
+                }
+            ?>
         </div>
     </body>
 </html>
