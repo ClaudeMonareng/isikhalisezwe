@@ -4,7 +4,7 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Login Page</title>
-        <link rel="stylesheet" href="css/login.css">
+        <link rel="stylesheet" href="./css/login.css">
     </head>
     <body>
         <div class="container">
@@ -21,6 +21,7 @@
                     </div>
                     <div class="field">
                         <input type="submit" name="submit" class="btn" value="Login">
+                        <a href="../index.html" class="btn">Return Main</a>
                     </div>
                 </form>
             </div>

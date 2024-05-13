@@ -14,7 +14,8 @@
                 <div class="card">
                     <div class="card-header">
                         <h4>Learner Details
-                            <a href="learner-create.php" class="btn btn-primary float-end">Add Learner</a>
+                            <div><a href="learner-create.php" class="btn btn-primary float-end">Add Learner</a></div>
+                            <div><a href="login.php" class="btn btn-primary float-end">Logout</a></div>
                         </h4>
                     </div>
                     <div class="card-body">
