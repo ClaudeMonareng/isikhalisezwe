@@ -4,7 +4,8 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Login Page</title>
-        <link rel="stylesheet" href="./css/login.css">
+        <link rel="stylesheet" href="css/login.css">
+        <link rel="stylesheet" href="./public/style.css">
     </head>
     <body>
         <div class="container">
@@ -20,8 +21,8 @@
                         <input type="text" name="password" id="password">
                     </div>
                     <div class="field">
-                        <input type="submit" name="submit" class="btn" value="Login">
-                        <input type="text" href="../index.html" class="btn" value="Return Main">
+                        <input type="submit" name="submit" class="btn" value="Login">            
+                        <a href="../index.html" class="hero-btn">Return Main</a>
                     </div>
                 </form>
             </div>
@@ -29,7 +30,7 @@
                 if(isset($_POST["submit"])){
 
                     if(!empty($_POST["username"]) && !empty($_POST["password"])){
-
+                        
                         $_SESSION["username"] = $_POST["username"];
                         $_SESSION["password"] = $_POST["password"];
 
