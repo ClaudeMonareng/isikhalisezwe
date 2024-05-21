@@ -14,24 +14,24 @@
         <title>Isikhalisezwe Registration</title>
     </head>
     <body>
-        <header>
-            <nav class="section">
-                <a href="../index.html"><img src="images/logo2.png" alt=""></a>
-                <div class="nav-links" id="navLinks">
-                    <i class="fa fa-times" onclick="hideMenu()"></i>
-                    <ul>
-                        <li><a href="../index.html">Home</a></li>
-                        <li><a href="about.html">About</a></li>
-                        <li><a href="subjects.html">Subjects</a></li>
-                        <li><a href="https://claudemonareng.github.io/fine-point/">Blog</a></li>
-                        <li><a href="learning-portal.html">Learning Portal</a></li>
-                        <li><a href="login.php">Admin Page</a></li>
-                        <li><a href="contact-us.html">Contact Us</a></li>
-                    </ul>
-                </div>
-                <i class="fa fa-bars" onclick="showMenu()"></i>
-            </nav>
-        </header>
+    <header class="sub-header">
+        <nav class="subheader-nav">
+            <a href="../index.html"><img src="images/logo2.png" alt=""></a>
+            <div class="nav-links" id="navLinks">
+                <i class="fa fa-times" onclick="hideMenu()"></i>
+                <ul>
+                    <li><a href="../index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="subjects.html">Subjects</a></li>
+                    <li><a href="https://claudemonareng.github.io/fine-point/">Blog</a></li>
+                    <li><a href="learning-portal.html">Learning Portal</a></li>
+                    <li><a href="login.php">Admin Page</a></li>
+                    <li><a href="contact-us.html">Contact Us</a></li>
+                </ul>
+            </div>
+            <i class="fa fa-bars" onclick="showMenu()"></i>
+        </nav>
+    </header>
         <div class="container">
         
             <?php

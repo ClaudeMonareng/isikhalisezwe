@@ -11,54 +11,165 @@ img {
     vertical-align: middle;
 }
 
-.header {
-    min-height: 90vh;
+/* BUTTONS */
+/* MORE INFORMATION BUTTON */
+
+.hero-btn {
+    border: 1px solid #ffffff;
+    background: transparent;
+    display: inline-block;
+    text-decoration: none;
+    border-radius: 0.3em;
+    position: relative;
+    padding: 12px 34px;
+    color: #eeeeee;
+    cursor: pointer;
+    font-size: 13px;
+}
+
+.hero-btn:hover {
+    background-color: #3246ff;
+    border-radius: 1em;
+    transition: 0.2s;
+    color: white;
+}
+
+/* KNOW MORE BUTTON */
+
+.hero-btn {
+    display: inline-block;
+    text-decoration: none;
+    color: #ffffff;
+    border: 1px solid #ffffff;
+    padding: 12px 34px;
+    font-size: 13px;
+    background: transparent;
+    border-radius: 0.3em;
+    position: relative;
+    cursor: pointer;
+}
+
+.hero-btn:hover {
+    background-color: #3246ff;
+    border-radius: 1em;
+    transition: 0.2s;
+    color: white;
+    outline: none;
+}
+
+/* SEND BUTTON */
+
+.send-btn {
+    display: inline-block;
+    text-decoration: none;
+    color: #000000;
+    border: 1px solid #0a0808;
+    padding: 12px 34px;
+    font-size: 13px;
+    background: transparent;
+    border-radius: 0.3em;
+    position: relative;
+    cursor: pointer;
+}
+
+.send-btn:hover {
+    background-color: #3246ff;
+    border: 2px solid #ffffff;
+    border-radius: 1em;
+    transition: 0.2s;
+    color: white;
+    outline: none;
+}
+
+.continue-btn {
+    border-radius: 5px;
+    cursor: pointer;
+    border: 2px solid skyblue;
+    background-color: skyblue;
+    color: white;
+    margin-top: 0;
+    padding: 20px;
     width: 100%;
+}
+
+.continue-btn:hover {
+    background-color: white;
+    color: black;
+}
+
+/* HEADER CONCERNS */
+
+.header.sticky {
+    box-shadow: var(--box-shadow);
+    height: calc(2.5em + 1em);
+}
+
+.header {
+    min-height: 80vh;
+    width: 100%;
+    display: inline-flexbox;
     background-image: linear-gradient(rgba(4, 9, 30, .7), rgba(4, 9, 30, .7)), url(images/isikhali01.jpg);
     background-position: center;
     background-size: cover;
 }
 
-.sub-heading {
-    display: inline-flexbox;
-    width: 100%;
-    max-width: 1150px;
-    margin-left: auto;
-    margin-right: auto;
+.sub-header.sticky {
+    box-shadow: var(--box-shadow);
+    height: calc(2.5em + 1em);
 }
 
-header {
-    background-image: linear-gradient(rgba(4, 9, 30, 0.5), rgba(4, 9, 30, 0.5));
-    box-shadow: 0px 0px 20px rgb(0 0 0 / 10%);
-    backdrop-filter: blur(20px);
-}
-
-/* NAVLINKS */
-
-.nav-section {
-    padding: 2em;
+.sub-header {
+    background-position: center;
     display: flex;
-    padding: 2% 6%;
-    justify-content: space-between;
-    align-items: center;
-    max-width: 1150px;
-    margin-left: auto;
-    margin-right: auto;
-    /* position: relative; */
+    background-size: cover;
+    min-height: 30vh;
+    color: #fff;
+    width: 100%;
 }
 
-.section {
+.sub-header h1 {
+    margin-top: 100px;
     text-align: center;
-    padding: 2em;
-    /* display: flex; */
-    padding: 2% 6%;
-    justify-content: space-between;
+}
+
+/* NAV CONCERNS */
+
+.header-nav {
+    height: calc(4rem + 1rem);
+    max-width: 1250px;
+    min-width: 100%;
+    display: flex;
+    justify-content: center;
     align-items: center;
-    max-width: 1150px;
+    padding: 0 20px;
+    transition: .6s ease;
     margin-left: auto;
     margin-right: auto;
-    /* position: relative; */
-    padding: 6rem 2rem 2rem;
+    z-index: 99999;
+    position: fixed;
+    top: 0;
+    left: 0;
+    backdrop-filter: blur(20px);
+    background-color: rgba(71, 61, 139, .7);
+}
+
+.subheader-nav {
+    height: calc(4rem + 1rem);
+    max-width: 1250px;
+    min-width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 20px;
+    transition: .6s ease;
+    margin-left: auto;
+    margin-right: auto;
+    z-index: 99999;
+    position: fixed;
+    top: 0;
+    left: 0;
+    backdrop-filter: blur(20px);
+    background-color: rgba(71, 61, 139, .7);
 }
 
 nav img {
@@ -115,98 +226,10 @@ nav img {
     display: none;
 }
 
-.text-box {
-    width: 90%;
-    color: #fff;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    text-align: center;
-}
-
-.text-box h1 {
-    font-size: 62px;
-}
-
-.text-box p {
-    margin: 10px 0 40px;
-    font-size: 14px;
-    color: #fff;
-}
-
-/* MORE INFORMATION BUTTON */
-
-.hero-btn {
-    border: 1px solid #ffffff;
-    background: transparent;
-    display: inline-block;
-    text-decoration: none;
-    border-radius: 0.3em;
-    position: relative;
-    padding: 12px 34px;
-    color: #eeeeee;
-    cursor: pointer;
-    font-size: 13px;
-}
-
-.hero-btn:hover {
-    background-color: #3246ff;
-    border-radius: 1em;
-    transition: 0.2s;
-    color: white;
-}
-
-/* SEND BUTTON */
-
-.send-btn {
-    display: inline-block;
-    text-decoration: none;
-    color: #000000;
-    border: 1px solid #0a0808;
-    padding: 12px 34px;
-    font-size: 13px;
-    background: transparent;
-    border-radius: 0.3em;
-    position: relative;
-    cursor: pointer;
-}
-
-.send-btn:hover {
-    background-color: #3246ff;
-    border: 2px solid #ffffff;
-    border-radius: 1em;
-    transition: 0.2s;
-    color: white;
-    outline: none;
-}
-
 /* TEXT BOX */
-/* INCLUDES NAME OF THE SCHOOL, TAG LINE AND KNOW MORE BUTTON */
+/* INCLUDES NAME OF THE SCHOOL AND TAG LINE */
 
-.text-box-wrapper {
-    min-height: 70vh;
-    background-image: linear-gradient(rgba(4, 9, 30, 0.5), rgba(4, 9, 30, 0.5)), url(images/isikhali01.jpg);
-    background-position: center;
-    background-size: cover;
-}
-
-.sub-header-wrapper {
-    min-height: 30vh;
-    background-image: linear-gradient(rgba(4, 9, 30, 0.5), rgba(4, 9, 30, 0.5));
-    background-position: center;
-    background-size: contain;
-}
-
-.sub-header-wrapper h1 {
-    margin: 10px 0 40px;
-    font-size: 15px;
-    color: #fff;
-}
-
-.text-box-wrapper .text-box {
-    min-height: 100%;
-    width: 100%;
+.text-box {
     background-position: center;
     background-size: cover;
     position: relative;
@@ -214,15 +237,14 @@ nav img {
     border-radius: .5em;
     text-align: center;
     color: #fff;
-    padding-bottom: 2em;
-    padding-top: 2em;
-    width: 50.5em;
-    height: 70vh;
-    left: 17em;
-    top: 8.5em;
+    padding: 10em 0;
+    width: 45em;
+    max-height: 60vh;
+    max-width: 1150px;
+    margin: 5em auto 0 auto;
 }
 
-.text-box-wrapper .text-box span {
+.text-box span {
     margin-top: 10em;
     font-size: 80px;
     font-weight: 600;
@@ -232,40 +254,32 @@ nav img {
     opacity: 1;
 }
 
-.text-box-wrapper .text-box p {
-    margin: 10px 0 40px;
+.text-box p {
+    margin: 10px 0 40px 0;
     font-size: 15px;
     color: #fff;
 }
 
-.text-box-wrapper .text-box h1 {
+.text-box h1 {
     font-size: 62px;
 }
 
-/* VISIT TO KNOW MORE BUTTON */
+/* BODY SECTION */
 
-.hero-btn {
-    display: inline-block;
-    text-decoration: none;
-    color: #ffffff;
-    border: 1px solid #ffffff;
-    padding: 12px 34px;
-    font-size: 13px;
-    background: transparent;
-    border-radius: 0.3em;
+.section {
+    text-align: center;
+    padding: 2em;
+    padding: 2% 6%;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1150px;
+    margin-left: auto;
+    margin-right: auto;
     position: relative;
-    cursor: pointer;
+    padding: 6rem 2rem 2rem;
 }
 
-.hero-btn:hover {
-    background-color: #3246ff;
-    border-radius: 1em;
-    transition: 0.2s;
-    color: white;
-    outline: none;
-}
-
-/* GRADES */
+/* GRADES SECTION */
 
 .grades {
     width: 80%;
@@ -373,7 +387,7 @@ h3 {
     transform: scale(1.02);
 }
 
-/* UPDATES */
+/* UPDATES SECTION */
 
 .updates {
     width: 80%;
@@ -430,7 +444,7 @@ a {
     text-decoration: none;
 }
 
-/* FACILITIES */
+/* FACILITIES SECTION*/
 /* INCLUDES COLUMNS AND IMAGES */
 
 .facilities {
@@ -468,7 +482,7 @@ a {
     transform: scale(1.03);
 }
 
-/* TESTIMONIALS */
+/* TESTIMONIALS SECTION */
 
 .testimonials-row {
     margin-top: 5%;
@@ -519,7 +533,7 @@ a {
     color: #4936f4;
 }
 
-/* SUBJECT TEACHERS */
+/* SUBJECT TEACHERS SECTION */
 
 .teachers {
     width: 80%;
@@ -579,22 +593,6 @@ a {
     color: #9e8100;
 }
 
-.continue-btn {
-    border-radius: 5px;
-    cursor: pointer;
-    border: 2px solid skyblue;
-    background-color: skyblue;
-    color: white;
-    margin-top: 0;
-    padding: 20px;
-    width: 100%;
-}
-
-.continue-btn:hover {
-    background-color: white;
-    color: black;
-}
-
 /* PARAGRAPH LINE */
 /* NEED TO LOCALIZE/MODULARIZE PARAGRAPH LINES */
 
@@ -617,22 +615,6 @@ p {
     color: red;
 }
 
-/* TOP OF EVERY LINKED PAGE */
-
-.sub-header {
-    height: 50vh;
-    width: 100%;
-    background-image: linear-gradient(rgba(4, 9, 30, 0.7), rgba(4, 9, 30, 0.7)), url(images/hackathon.jpg);
-    background-position: center;
-    background-size: cover;
-    text-align: center;
-    color: #fff;
-}
-
-.sub-header h1 {
-    margin-top: 100px;
-}
-
 /* ABOUT PAGE */
 
 .about-col {
@@ -652,7 +634,7 @@ p {
     padding: 15px 0 25px;
 }
 
-/* CONTACT US */
+/* CONTACT-US SECTION */
 
 .location {
     width: 80%;
@@ -725,7 +707,7 @@ p {
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 100%;
+    min-width: 100%;
     text-align: center;
     padding: 30px 0;
     flex-direction: column;
